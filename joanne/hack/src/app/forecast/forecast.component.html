@@ -1,38 +1,61 @@
 <div class="main">
-  <div class="weather-info">
-
-  </div>
+  <div class="weather-info"></div>
   <div class="week">
-    <div class="day" [class.selected]="curDay === today" (click)="switchDays(today)">
-      {{days[today]}}
+    <div
+      class="day"
+      [class.selected]="curDay === today"
+      (click)="switchDays(today)"
+    >
+      {{ days[today] }}
       <!-- todo -->
     </div>
-    <div class="day" [class.selected]="curDay === (today + 1) % 6" (click)="switchDays((today + 1) % 6)">
-      {{days[(today + 1) % 6]}}
+    <div
+      class="day"
+      [class.selected]="curDay === (today + 1) % 6"
+      (click)="switchDays((today + 1) % 6)"
+    >
+      {{ days[(today + 1) % 6] }}
       <!-- todo -->
     </div>
-    <div class="day" [class.selected]="curDay === (today + 2) % 6" (click)="switchDays((today + 2) % 6)">
-      {{days[(today + 2) % 6]}}
+    <div
+      class="day"
+      [class.selected]="curDay === (today + 2) % 6"
+      (click)="switchDays((today + 2) % 6)"
+    >
+      {{ days[(today + 2) % 6] }}
       <!-- todo -->
     </div>
-    <div class="day" [class.selected]="curDay === (today + 3) % 6" (click)="switchDays((today + 3) % 6)">
-      {{days[(today + 3) % 6]}}
+    <div
+      class="day"
+      [class.selected]="curDay === (today + 3) % 6"
+      (click)="switchDays((today + 3) % 6)"
+    >
+      {{ days[(today + 3) % 6] }}
       <!-- todo -->
     </div>
-    <div class="day" [class.selected]="curDay === (today + 4) % 6" (click)="switchDays((today + 4) % 6)">
-      {{days[(today + 4) % 6]}}
+    <div
+      class="day"
+      [class.selected]="curDay === (today + 4) % 6"
+      (click)="switchDays((today + 4) % 6)"
+    >
+      {{ days[(today + 4) % 6] }}
       <!-- todo -->
     </div>
-    <div class="day" [class.selected]="curDay === (today + 5) % 6" (click)="switchDays((today + 5) % 6)">
-      {{days[(today + 5) % 6]}}
+    <div
+      class="day"
+      [class.selected]="curDay === (today + 5) % 6"
+      (click)="switchDays((today + 5) % 6)"
+    >
+      {{ days[(today + 5) % 6] }}
       <!-- todo -->
     </div>
-    <div class="day" [class.selected]="curDay === (today + 6) % 6" (click)="switchDays((today + 6) % 6)">
-      {{days[(today + 6) % 6]}}
+    <div
+      class="day"
+      [class.selected]="curDay === (today + 6) % 6"
+      (click)="switchDays((today + 6) % 6)"
+    >
+      {{ days[(today + 6) % 6] }}
       <!-- todo -->
     </div>
-
-
   </div>
-
 </div>
