@@ -1,3 +1,7 @@
+// export interface week {
+    
+// }
+
 export interface day  {
     hours: hour[];
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { WeatherService } from './weather.service';
-import { day } from './day';
+import { hour } from './day';
 
 @Component({
   selector: 'app-root',
@@ -14,25 +14,28 @@ export class AppComponent {
   }
 
   title = 'hack';
-  selected: number = 0;
-  error: boolean = false;
-  currentTab : String = "daily";
-  d = new Date();
-  temp: number = 0;
-  week: day[] = [
+  d = new Date(); //today's date
 
+  selected: number = 0;
+  currentTab : String = "daily";
+
+  search_error: boolean = false;
+  temp: number = 0;
+  search_visible: boolean = false;
+
+  week: day[] = [
+   
   ];
 
-  visible: boolean = false;
 
   see() 
   {
-    this.visible = true;
+    this.search_visible = true;
   }
 
   submit(value: string) {
      if (value.length < 4 || Number(value) < 501 || Number(value) > 99950) {
-        this.error = true;
+        this.search_error = true;
         return;
      }
   }
@@ -44,16 +47,14 @@ export class AppComponent {
   getTemp() {
     this.weatherService.getTemp().subscribe(temp => 
       {
-        //first day
-        let day = [];
+        let day: hour[] = [];
         for (let i = 0; i < 24 - this.d.getHours(); i++) {
-          // day.push(temp.)
+          let hour = {} as hour;
+          hour.temp = temp[i].temp;
+          hour.wind_spd = temp[i].wind_spd;
+          day.push(hour);
         }
-        this.week.push(
-          {
-
-          }
-        )
+        this.week.push(day);
         for ()
       }  
     );
