@@ -9,9 +9,10 @@ export interface day  {
 export interface hour {
     temp: number;
     wind_spd: number;
-    // wind_dir: string;
-    // description: string;
-    // uv_index: number;
-    // sunrise: string;
-    // sunset: string;
+    timestamp_local: string;
+    wind_dir: string;
+    description: string;
+    uv_index: number;
+    sunrise: string;
+    sunset: string;
 }

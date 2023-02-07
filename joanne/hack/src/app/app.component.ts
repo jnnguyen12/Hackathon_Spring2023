@@ -23,10 +23,7 @@ export class AppComponent {
   temp: number = 0;
   search_visible: boolean = false;
 
-  week: day[] = [
-   
-  ];
-
+  week: hour[][] = [];
 
   see() 
   {
@@ -48,16 +45,26 @@ export class AppComponent {
     this.weatherService.getTemp().subscribe(temp => 
       {
         let day: hour[] = [];
-        for (let i = 0; i < 24 - this.d.getHours(); i++) {
+        let i = 0;
+
+        // alert(temp.data.length);
+        for (; i < temp.data.length; i++) {
           let hour = {} as hour;
-          hour.temp = temp[i].temp;
-          hour.wind_spd = temp[i].wind_spd;
+          hour.temp = Math.floor(temp.data[i].temp);
+          hour.wind_spd = Math.floor(temp.data[i].wind_spd);
+          hour.timestamp_local = temp.data[i].timestamp_local;
           day.push(hour);
+
+          if (i == 24 - this.d.getHours() - 1) {
+            this.week.push(day); // day 1
+          }
         }
+        // TODO FIX ME FOR A WEEK VALUE
         this.week.push(day);
-        for ()
+        // alert("success");
       }  
     );
+    
   }
 
   ngOnInit() {

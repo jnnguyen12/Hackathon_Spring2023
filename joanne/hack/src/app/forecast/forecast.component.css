@@ -21,39 +21,46 @@
     position: relative;
     padding: 20px;
     background-color: #dbcfb3;
+    border-radius: 10px;
+    border-bottom: none;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
     /* box-shadow: 7px 7px rgb(222, 224, 222); */
     }
 
     .day.selected {
-        border-radius: 10px;
-        border-bottom: none;
         /* border-top: 7px solid #ddc7aa; */
         height: 24px;
         background-color: #eee5d0;
         border-left: 4px dashed #e2d8c0;    
         border-right: 4px dashed #e2d8c0;    
         border-top: 4px dashed #e2d8c0;    
-        border-bottom-left-radius:0;
-        border-bottom-right-radius:0;
         /* box-sizing: border-box; */
     }
 
 .weather-info {
-    background-color: blue;
     position: relative;
     width: 95%;
     top: 214px;
     height: 650px;
     margin: auto;
-
     border-radius: 10px;
-    /* border-top: 7px solid #ddc7aa; */
     background-color: #eee5d0;
     border: 4px dashed #e2d8c0;
-    /* border-left: 4px dashed #e2d8c0;    
-    border-right: 4px dashed #e2d8c0;    
-    border-bottom: 4px dashed #e2d8c0;     */
-    /* border-bottom-left-radius:0;
-    border-bottom-right-radius:0; */
     overflow: auto;
+}
+
+.temp {
+    font-size: 140px;
+    position: relative;
+    left: 20%;
+    top: 25%;
+}
+
+.deg {
+    font-size: 70px;
+    display: inline-block;
+    left: 17%;
+    top: 15%;
+    position: relative;
 }

@@ -8,7 +8,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 export class WeatherService {
   // private url: string = 'http://api.weatherbit.io/v2.0/forecast/hourly?key=63905b681ef44e068d0331081d44c8e8&postal_code=50010&hours=168';
-  private url: string = 'http://api.weatherbit.io/v2.0/forecast/hourly?key=63905b681ef44e068d0331081d44c8e8&postal_code=50010&hours=24';
+  private url: string = 'http://api.weatherbit.io/v2.0/forecast/hourly?key=63905b681ef44e068d0331081d44c8e8&units=I&postal_code=50014&hours=1';
   // private url: string = 'https://api.weatherbit.io/v2.0/current?key=63905b681ef44e068d0331081d44c8e8&postal_code=50010'
   // private url: string = 'https://api.weatherbit.io/v2.0/current?lat=35.7796&lon=-78.6382&key=API_KEY&include=minutely'
   // private url: string = 'https://ir-example.mir.prod.reco.microsoft.com/Reco/V1.0/New?modeling=adw&Count=5'
@@ -66,8 +66,7 @@ export class WeatherService {
  }
   getTemp(): Observable<any>{
     return this.http.get(this.url);
-    // return of(
-    //   this.data
-    // )
   }
+
+
 }
